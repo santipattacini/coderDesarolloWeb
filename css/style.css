@@ -22,6 +22,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 0 40px 0 40px;
+    font-family: 'Poppins', sans-serif;
 }
 header div ul{ 
     display: inline-block;
@@ -44,7 +45,6 @@ header div ul li a:hover{
 
 /* estilos del nav */
 nav{
-    height: 100px;
     background-color: whitesmoke;
     display: flex;
     justify-content: space-evenly;
@@ -69,6 +69,21 @@ nav ul li:hover > a{
 .logoSG{
     height: 60%;
 }
+.nav-div{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+}
+.navbar-nav a:hover{
+    color: #f55b14;
+}
+
 
 /* contenedor principal */
 .homeMainContent{
@@ -244,6 +259,8 @@ nav ul li:hover > a{
     color: whitesmoke;
     font-size: 3.5rem;
     padding-left: 10rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
 }
 
 /* contenedor quienes somos */
@@ -306,6 +323,17 @@ nav ul li:hover > a{
     color: #f55b14;
     font-weight: bold;
     font-size: 1.4rem;
+}
+
+/* contenedor exp */
+.expCards{
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.expCards p{
+    font-family: 'Poppins', sans-serif;
 }
 
 /* formulario */
@@ -378,6 +406,7 @@ footer{
     display: flex;
     justify-content: space-between;
     padding: 0 10px 0 10px;
+    font-family: 'Poppins', sans-serif;
 }
 footer span a{
     text-decoration: none;
@@ -403,7 +432,6 @@ footer span a:hover{
     }
     /* nav */
     nav{
-        height: 70px;
         padding: 10px;
     }
     nav ul{

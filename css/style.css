@@ -4,9 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-html{
-    font-size: 16px;
+body{
     font-family: 'Poppins', sans-serif;
 }
 p{
@@ -46,28 +44,6 @@ header div ul li a:hover{
 /* estilos del nav */
 nav{
     background-color: whitesmoke;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 10px;
-}
-nav ul li{
-    list-style-type: none;
-    display: inline-block;
-    margin: 10px;
-}
-nav ul li a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-nav ul li:hover > a{
-    color: #f55b14;
-
-}
-.logoSG{
-    height: 60%;
 }
 .nav-div{
     display: flex;

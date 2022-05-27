@@ -13,7 +13,7 @@ p{
     text-align: justify;
 }
 
-/* estilo del header */
+/* HEADER */
 header{
     height: 40px;
     background-color: #131e3c;
@@ -43,7 +43,7 @@ header div ul li a:hover{
     color: whitesmoke;
 }
 
-/* estilos del nav */
+/* NAV */
 nav{
     background-color: whitesmoke;
 }
@@ -57,41 +57,45 @@ nav{
     text-decoration: none;
     color: #131e3c;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 20px;
 }
 .navbar-nav a:hover{
     color: #f55b14;
 }
-.logoSG{
-    width: 80%;
-}
 
-/* contenedor principal */
-.homeMainContent{
-    height: 600px;
+/* HOME - MAIN CONTAINER */
+.home-first-sec{
+    height: 100vh;
+}
+.home-container-sec{
+    height: 84vh;
     background-image: url('../img/plantaTernium.jpg');
+    background-position: center center;
     background-repeat: no-repeat;
-    text-align: center;
-    display: grid;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.homeMainContent h1{
+.home-container-sec h1{
     color: whitesmoke;
-    font-size: 5rem;
+    font-size: 75px;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
-.homeMainContent h1 span{
+.home-container-sec h1 span{
     background-color: rgba( 19, 30, 60, 0.6);
     padding: 0 20px 00 20px;
     border-radius: 2rem;
 }
-.homeMainContent h2{
+.home-container-sec h2{
     color: whitesmoke;
-    font-size: 1.8rem;
+    font-size: 30px;
 }
-.homeMainContent div{
+.home-container-sec div{
     margin-top: 3rem;
 }
-.homeMainContent div a{
+.home-container-sec div a{
     text-decoration: none;
     color: whitesmoke;
     font-weight: bold;
@@ -99,31 +103,39 @@ nav{
     padding: 1rem;
     border-radius: 1rem;
 }
-.aboutUsButton{
+.about-us-button{
     background-color: #f55b14;
 }
-.contactButton{
+.contact-button{
     background-color: #131e3c;
 }
-.homeMainContent div a:hover{
+.main-container-sec div a:hover{
     border: 1px solid whitesmoke;
     background-color: initial;
 }
 
-/* POLITIC SECTION */
-.politic-sec{
+/* ESTRUCTURA MAIN - ESTILOS H1 */
+main div{
     padding: 1rem 10rem 1rem 10rem;
+}
+main div h1{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* HOME NAVTAB BOOTSTRAP - POLITIC */
+.politic-sec{
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.politic-sec h1{
-    font-size: 2.5rem;
-    font-weight: bold;
+.tab-pane{
+    padding: 0;
 }
 .politic-sec h3{
-    font-size: 1.6rem;
+    font-size: 24px;
     font-weight: bold;
     text-decoration: underline;
 }
@@ -147,7 +159,7 @@ nav{
     text-decoration: none;
     color: #f55b14;
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 24px;
     margin: 1rem;
 }
 .our-history:hover{
@@ -155,22 +167,13 @@ nav{
     color: #f55b14;
 }
 
-/* contenedor servicios home */
-.services-sec h1{
-    text-align: center;
-    padding: 1rem;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-.homeOurService{
-    padding: 0rem 10rem 1rem 10rem;
-}
-.homeOurService{
+/* HOME - SERVICES */
+.services-cards{
     display: grid;
     grid-template-areas: "IA CM MI";
     justify-content: space-around;
 }
-.homeOurService div{
+.services-cards div{
     margin-bottom: 1rem;
     padding: 1rem;
     width: 20rem;
@@ -180,81 +183,74 @@ nav{
     flex-flow: column nowrap;
     justify-content: space-between;
 }
-.homeOurService div:hover{
+.services-cards div:hover{
     transform: scale(1.05);
 }
-.homeOurService div img{
-    width: 50%;
+.services-cards div img{
+    width: 40%;
     margin: auto;
 }
-.homeOurService div:hover > img{
+.services-cards div:hover > img{
     display: none;
 }
-.homeOurService div p{
+.services-cards div p{
     display: none;
 }
-.homeOurService div a{
+.services-cards div a{
     display: none;
 }
-.homeOurService div:hover > p{
+.services-cards div:hover > p{
     display: block;
 }
-.homeOurService div:hover > a{
+.services-cards div:hover > a{
     display: block;
 }
-.homeOurService div span{
-    font-size: 1.2rem;
+.services-cards div span{
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
-.homeOurService div a{
+.services-cards div a{
     text-decoration: none;
     text-align: center;
     color: #f55b14;
     font-weight: bold;
 }
-.homeOurService div a:hover{
+.services-cards div a:hover{
     text-decoration: underline;
 }
-
-
-.sIngAut{
+.ing-card{
     grid-area: IA;
 }
-.sCalMed{
+.cal-card{
     grid-area: CM;
 }
-.sManInt{
+.man-card{
     grid-area: MI;
 }
 
-/* contenedor principal pages */
-.pagesMainContent{
-    height: 250px;
+/* PAGES - MAIN CONTENT */
+.pages-first-sec{
+    height: 50vh;
+}
+.pages-container-sec{
+    height: 34vh;
     background-image: url('../img/plantaAcindar.jpg');
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
 }
-.pagesMainContent h1{
+.pages-container-sec h1{
     color: whitesmoke;
-    font-size: 3.5rem;
+    font-size: 65px;
     padding-left: 10rem;
     font-weight: bold;
 }
 
-/* contenedor quienes somos */
-.contAboutUs{
+/* PAGES - ABOUT US */
+.about-us-sec{
     background-color: whitesmoke;
-    padding: 1rem 10rem 1rem 10rem;
-}
-.contAboutUs h1{
-    font-size: 1.6rem;
-}
-
-/* contenedor historia */
-.contOurHistory{
-    padding: 1rem 10rem 1rem 10rem;
 }
 
 /* contenedor servicios */
@@ -394,87 +390,109 @@ footer span a:hover{
 
 /* mq */
 @media screen and (max-width:600px){
-    /* header */
+    /* HEADER */
     header{
-        height: 1.5rem;
+        height: 20px;
         justify-content: center;
         padding: 0;
     }
-    .headerFollowUs{
+    .follow-us{
         display: none;
     }
-    .headerNumber{
+    .phone-number{
         display: none;
     }
-    /* nav */
+    /* NAV */
     .navbar{
         padding: 15px 20px 15px 20px;
     }
-    /* contenedor principal */
-    .homeMainContent{
-        height: 400px;
+    /* HOME - MAIN CONTAINER */
+    .home-first-sec{
+        height: 50vh;
     }
-    .homeMainContent h1{
-        font-size: 2.6rem;
+    .home-container-sec{
+        height: 36vh;
+        background-image: url('../img/plantaTerniumMobile.jpg');
     }
-    .homeMainContent h2{
-        font-size: 1.2rem;
+    .home-container-sec h1{
+        font-size: 32px;
     }
-    .homeMainContent div{
-        margin-top: 2rem;
+    .home-container-sec h2{
+        font-size: 16px;
     }
-    /* nuestra politica */
-    .homeAboutUs{
-        padding: 1rem 2rem 1rem 2rem;
+    .home-container-sec div{
+        margin-top: 1rem;
     }
-    .homeAboutUs h1{
+    .home-container-sec div a{
+        padding: 0.8rem;
+        margin: 0.5rem;
+    }
+    /* ESTRUCTURA MAIN - ESTILOS H1 */
+    main div{
+        padding: 1rem;
+    }
+    main div h1{
+        font-size: 26px;
+        font-weight: bold;
+        text-align: center;
+    }
+    /* HOME NAVTAB BOOTSTRAP - POLITIC */
+    .politic-sec{
+        padding: 1rem;
+    }
+    .politic-sec h1{
         font-size: 2rem;
     }
-    /* nuestros servicios */
-    .divOurServices h1{
+    .politic-sec ul li a{
+        padding: 0.8rem;
+        margin: 0.5rem;
+    }
+    .our-history{
+        font-size: 1.2rem;
+        margin: 0.5rem;
+    }
+    /* HOME - SERVICES */
+    .services-sec h1{
         padding-top: 1rem;
         font-size: 2rem;
     }
-    .homeOurService{
-        padding: 0rem 2rem 0rem 2rem;
+    .services-cards{
+        padding: 1rem;
     }
-    .homeOurService{
+    .services-cards{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .homeOurService div{
+    .services-cards div{
         margin: 1rem;
     }
-    .homeOurService div:hover{
+    .services-cards div:hover{
         transform: none;
-        height: 13.16rem;
     }
-    /* footer */
-    footer{
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
+    .services-cards div:hover > img{
+        display: block;
+    }
+    .services-cards div p{
+        display: block;
+    }
+    .services-cards div a{
+        display: block;
     }
     .spanFooterSG{
         display: none;
     }
-    /* portada paginas */
-    .pagesMainContent{
-        height: 150px;
-        align-items: center;
+    /* PAGES - MAIN CONTAINER */
+    .pages-first-sec{
+        height: 30vh;
     }
-    .pagesMainContent h1{
-        font-size: 2.6rem;
-        padding-left: 2rem;
+    .pages-container-sec{
+        height: 16vh;
+        background-image: url('../img/plantaAcindarMobile.jpg');
     }
-    /* quienes somos */
-    .contAboutUs{
-        padding: 1rem 2rem 1rem 2rem;
-    }
-    .contAboutUs h1{
-        font-size: 1.5rem;
-        text-align: center;
+    .pages-container-sec h1{
+        font-size: 32px;
+        padding-left: 1rem;
     }
     /* contenedor historia */
     .contOurHistory{
@@ -524,6 +542,12 @@ footer span a:hover{
     }
     .contInfo h2{
         font-size: 1.2rem;
+    }
+    /* FOOTER */
+    footer{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
     }
 }
 

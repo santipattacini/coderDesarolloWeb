@@ -1,0 +1,119 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #131e3c;
+    p{
+        text-align: center;
+    }
+}
+
+/* HEADER */
+header{
+    height: 40px;
+    background-color: #131e3c;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px 0 40px;
+    span{
+        color: #f55b14;
+        font-weight: bold;
+    }
+    div{
+        ul{
+            display: inline-block;
+            li{
+                display: inline-block;
+                list-style-type: none;
+                a{
+                    text-decoration: none;
+                    color: whitesmoke;
+                    :hover{
+                        text-decoration: underline;
+                        color: whitesmoke;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* NAV */
+nav{
+    background-color: whitesmoke;
+    .navbar{
+        padding: 15px 50px 15px 50px;
+    }
+    .navbar-nav{
+        text-align: right;
+        a{
+            text-decoration: none;
+            color: #131e3c;
+            font-weight: bold;
+            font-size: 20px;
+            :hover{
+                color: #f55b14;
+            }
+        }
+    }
+}
+
+/* HOME - MAIN CONTAINER */ 
+.home-first-sec{
+    height: 100vh;
+
+}
+/* HOME - COVER */
+.home-cover{
+    height: 84vh;
+    background-image: url('../img/plantaTernium.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1{
+        font-size: 75px;
+        font-weight: bold;
+        color: whitesmoke;
+        margin-bottom: 1rem;
+        span{
+            background-color: rgba( 19, 30, 60, 0.6);
+            padding: 0 20px 0 20px;
+            border-radius: 2rem;
+        }
+    }
+    h2{
+        font-size: 30px;
+        color: whitesmoke;
+    }
+    div{
+        margin-top: 3rem;
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            color: whitesmoke;
+            margin: 1rem;
+            padding: 1rem;
+            border-radius: 1rem;
+            :hover{
+                border: 1px solid whitesmoke;
+                background-color: initial;
+            }
+        }
+    }
+    .about-us-button{
+        background-color: #f55b14;
+    }
+    .contact-button{
+        background-color: #131e3c;
+    }
+}

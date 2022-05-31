@@ -1,0 +1,94 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #131e3c; }
+  body p {
+    text-align: center; }
+
+/* HEADER */
+header {
+  height: 40px;
+  background-color: #131e3c;
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px 0 40px; }
+  header span {
+    color: #f55b14;
+    font-weight: bold; }
+  header div ul {
+    display: inline-block; }
+    header div ul li {
+      display: inline-block;
+      list-style-type: none; }
+      header div ul li a {
+        text-decoration: none;
+        color: whitesmoke; }
+        header div ul li a :hover {
+          text-decoration: underline;
+          color: whitesmoke; }
+
+/* NAV */
+nav {
+  background-color: whitesmoke; }
+  nav .navbar {
+    padding: 15px 50px 15px 50px; }
+  nav .navbar-nav {
+    text-align: right; }
+    nav .navbar-nav a {
+      text-decoration: none;
+      color: #131e3c;
+      font-weight: bold;
+      font-size: 20px; }
+      nav .navbar-nav a :hover {
+        color: #f55b14; }
+
+/* HOME - MAIN CONTAINER */
+.home-first-sec {
+  height: 100vh; }
+
+/* HOME - COVER */
+.home-cover {
+  height: 84vh;
+  background-image: url("../img/plantaTernium.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .home-cover h1 {
+    font-size: 75px;
+    font-weight: bold;
+    color: whitesmoke;
+    margin-bottom: 1rem; }
+    .home-cover h1 span {
+      background-color: rgba(19, 30, 60, 0.6);
+      padding: 0 20px 0 20px;
+      border-radius: 2rem; }
+  .home-cover h2 {
+    font-size: 30px;
+    color: whitesmoke; }
+  .home-cover div {
+    margin-top: 3rem; }
+    .home-cover div a {
+      text-decoration: none;
+      font-weight: bold;
+      color: whitesmoke;
+      margin: 1rem;
+      padding: 1rem;
+      border-radius: 1rem; }
+      .home-cover div a :hover {
+        border: 1px solid whitesmoke;
+        background-color: initial; }
+  .home-cover .about-us-button {
+    background-color: #f55b14; }
+  .home-cover .contact-button {
+    background-color: #131e3c; }

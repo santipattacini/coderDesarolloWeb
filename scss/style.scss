@@ -1,3 +1,5 @@
+@import 'utilities/variables';
+
 /* reset */
 *{
     margin: 0;
@@ -7,23 +9,29 @@
 body{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    color: #131e3c;
+    color: $primary-color;
     p{
-        text-align: center;
+        text-align: justify;
     }
+}
+
+/* HOME - MAIN CONTAINER */ 
+.home-first-sec{
+    height: 100vh;
+
 }
 
 /* HEADER */
 header{
     height: 40px;
-    background-color: #131e3c;
-    color: whitesmoke;
+    background-color: $primary-color;
+    color: $tertiary-color;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 40px 0 40px;
     span{
-        color: #f55b14;
+        color: $secondary-color;
         font-weight: bold;
     }
     div{
@@ -34,11 +42,11 @@ header{
                 list-style-type: none;
                 a{
                     text-decoration: none;
-                    color: whitesmoke;
-                    :hover{
-                        text-decoration: underline;
-                        color: whitesmoke;
-                    }
+                    color: $tertiary-color;
+                }
+                a:hover{
+                    text-decoration: underline;
+                    color: $tertiary-color;
                 }
             }
         }
@@ -46,30 +54,23 @@ header{
 }
 
 /* NAV */
-nav{
-    background-color: whitesmoke;
-    .navbar{
-        padding: 15px 50px 15px 50px;
-    }
+.navbar{
+    background-color: $tertiary-color;
+    padding: 15px 50px 15px 50px;
     .navbar-nav{
         text-align: right;
         a{
             text-decoration: none;
-            color: #131e3c;
+            color: $primary-color;
             font-weight: bold;
             font-size: 20px;
-            :hover{
-                color: #f55b14;
-            }
+        }
+        a:hover{
+            color: $secondary-color;
         }
     }
 }
 
-/* HOME - MAIN CONTAINER */ 
-.home-first-sec{
-    height: 100vh;
-
-}
 /* HOME - COVER */
 .home-cover{
     height: 84vh;
@@ -83,7 +84,7 @@ nav{
     h1{
         font-size: 75px;
         font-weight: bold;
-        color: whitesmoke;
+        color: $tertiary-color;
         margin-bottom: 1rem;
         span{
             background-color: rgba( 19, 30, 60, 0.6);
@@ -93,27 +94,404 @@ nav{
     }
     h2{
         font-size: 30px;
-        color: whitesmoke;
+        color: $tertiary-color;
     }
     div{
         margin-top: 3rem;
         a{
             text-decoration: none;
             font-weight: bold;
-            color: whitesmoke;
+            color: $tertiary-color;
             margin: 1rem;
             padding: 1rem;
             border-radius: 1rem;
-            :hover{
-                border: 1px solid whitesmoke;
-                background-color: initial;
-            }
+        }
+        a:hover{
+            border: 1px solid $tertiary-color;
+            background-color: initial;
         }
     }
     .about-us-button{
-        background-color: #f55b14;
+        background-color: $secondary-color;
     }
     .contact-button{
-        background-color: #131e3c;
+        background-color: $primary-color;
     }
+}
+
+/* ESTILOS MAIN Y H1 */
+main div{
+    padding: 1rem 10rem 1rem 10rem;
+    h1{
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+/* HOME NAVTAP BOOTSTRAP - POLITIC */
+.politic-sec{
+    background-color: $tertiary-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ul{
+        padding-bottom: 10px;
+        li{
+            a{
+                background-color: $primary-color;
+                font-weight: bold;
+                color: $tertiary-color;
+                margin: 1rem;
+                padding: 1rem;
+                border-radius: 1rem;
+            }
+            a:hover{
+                background-color: $secondary-color;
+                color: $tertiary-color;
+                cursor: pointer;
+            }
+        }
+    }
+    section{
+        .tab-pane{
+            padding: 0;
+        }
+        div{
+            h3{
+                font-size: 24px;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+    }
+    .our-history{
+        text-decoration: none;
+        color: $secondary-color;
+        font-weight: bold;
+        font-size: 24px;
+        margin: 1rem;
+        
+    }
+    .our-history:hover{
+        text-decoration: underline;
+        color: $secondary-color;
+    }
+}
+
+/* HOME - SERVICES */
+.services-cards{
+    display: grid;
+    grid-template-areas: "IA CM MI";
+    justify-content: space-around;
+    div{
+        margin-bottom: 1rem;
+        padding: 1rem;
+        width: 20rem;
+        border: 2px solid $primary-color;
+        border-radius: 1rem;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        img{
+            width: 40%;
+            margin: auto;
+        }
+        span{
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        p{
+            display: none;
+        }
+        a{
+            display: none;
+            text-decoration: none;
+            text-align: center;
+            color: $secondary-color;
+            font-weight: bold;
+            
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+    div:hover{
+        transform: scale(1.05);
+    }
+    div:hover > img{
+        display: none;
+    }
+    div:hover > a, div:hover > p{
+        display: block;
+    }
+    .ing-card{
+        grid-area: IA;
+    }
+    .cal-card{
+        grid-area: CM;
+    }
+    .man-card{
+        grid-area: MI;
+    }
+}
+
+/* PAGES - MAIN CONTAINER */ 
+.pages-first-sec{
+    height: 50vh;
+}
+
+/* PAGES - COVER */
+.pages-cover{
+    height: 34vh;
+    background-image: url('../img/plantaAcindar.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    h1{
+        font-size: 65px;
+        color: $tertiary-color;
+        padding-left: 10rem;
+        font-weight: bold;
+    }
+}
+
+/* PAGES ABOUT US */
+.about-us-sec{
+    background-color: $tertiary-color;
+} 
+
+/* PAGES - OUR SERVICES */
+.our-services-sec{
+    background-color: $tertiary-color;
+    ul{
+        li{
+            list-style-type: none;
+            text-align: center;
+            margin-bottom: 1rem;
+            span{
+                font-size: 24px;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/* PAGES - CERTIFICATIONS */ 
+.certifications-sec{
+    display: grid;
+    height: 200px;
+    justify-content: space-evenly;
+    grid-template-areas: "text pdf";
+    div{
+        padding: 0;
+        margin: 1rem;
+    }
+    .certifications-text{
+        grid-area: text;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1{
+            text-align: center;
+            font-size: 24px;
+        }
+    }
+    .certifications-pdf{
+        grid-area: pdf;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        a{
+            text-decoration: none;
+            color: $secondary-color;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+}
+
+/* PAGES - EXPERIENCE */
+.experience-cards{
+    margin: 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+} 
+
+/* PAGES - FORM */
+.form-sec{
+    background-color: $tertiary-color;
+    text-align: center;
+    padding: 1.5rem;
+    h1{
+        padding-bottom: 1rem;
+    }
+} 
+form{
+    background-color: white;
+    width: 400px;
+    padding: 1.2rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    margin: auto;
+    div{
+        padding: 0;
+    }
+    input, textarea{
+        width: 100%;
+        padding: 3px;
+    }
+    textarea{
+        height: 5rem;
+    }
+    .form-data input{
+        margin-bottom: 0.5rem;
+    }
+    .form-button{
+        background-color: $primary-color;
+        color: $tertiary-color;
+        font-weight: bold;
+    }
+    .form-button:hover{
+        background-color: $secondary-color;
+        cursor: pointer;
+    }
+}
+
+/* PAGES - INFO */ 
+.info-sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    h2{
+        font-size: 24px;
+        text-decoration: underline;
+    }
+    p{
+        span{
+            font-weight: bold;
+            font-style: italic;
+        }
+    }
+}
+
+/* PAGES - LOCATION */ 
+.location-sec{
+    padding: 0;
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* FOOTER */
+footer{
+    background-color: $primary-color;
+    color: $tertiary-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+    span{
+        a{
+            text-decoration: none;
+            color: $tertiary-color;
+        }
+        a:hover{
+            color: $secondary-color;
+        }
+    }
+}
+
+/* MEDIA QUERIES */ 
+@media screen and (max-width: 600px){
+    /*HOME - MAIN CONTAINER */
+    .home-first-sec{
+        height: 50vh;
+    }
+    /* HEADER */
+    header{
+        height: 20px;
+        justify-content: center;
+        padding: 0;
+        .phone-number{
+            display: none;
+        }
+        .follow-us{
+            display: none;
+        }
+    }
+    /* NAV */ 
+    .navbar{
+        padding: 1rem 1.5rem 1rem 1.5rem;
+    }
+    /* HOME - COVER */ 
+    .home-cover{
+        height: 36vh;
+        background-image: url('../img/plantaTerniumMobile.jpg');
+        h1{
+            font-size: 32px;
+        }
+        h2{
+            font-size: 16px;
+        }
+        div{
+            margin-top: 1rem;
+            a{
+                padding: 0.8rem;
+                margin: 0.5rem;
+            }
+        }
+    }
+    /* ESTILOS MAIN Y H1 */ 
+    main div{
+        padding: 1rem;
+        h1{
+            font-size: 26px;
+        }
+    }
+    /* HOME NAVTAB BOOTSTRAP - POLITIC */ 
+    .politic-sec{
+        ul{
+            li{
+                a{
+                    padding: 0.8rem;
+                    margin: 0.5rem;
+                }
+            }
+        }
+        .our-history{
+            font-size: 20px;
+            margin: 0.5rem;
+        }
+    }
+    /* HOME - SERVICES */ 
+    .services-cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        div{
+            margin: 1rem;
+        }
+        div:hover{
+            transform: initial;
+        }
+        div:hover > img, div a, div p{
+            display: initial;
+        }
+    }
+    /* FOOTER */
+    footer{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        .span-sg{
+            display: none;
+        }
+    } 
 }

@@ -9,13 +9,17 @@ body {
   font-size: 16px;
   color: #131e3c; }
   body p {
-    text-align: center; }
+    text-align: justify; }
+
+/* HOME - MAIN CONTAINER */
+.home-first-sec {
+  height: 100vh; }
 
 /* HEADER */
 header {
   height: 40px;
   background-color: #131e3c;
-  color: whitesmoke;
+  color: #f5f5f5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,29 +34,24 @@ header {
       list-style-type: none; }
       header div ul li a {
         text-decoration: none;
-        color: whitesmoke; }
-        header div ul li a :hover {
-          text-decoration: underline;
-          color: whitesmoke; }
+        color: #f5f5f5; }
+      header div ul li a:hover {
+        text-decoration: underline;
+        color: #f5f5f5; }
 
 /* NAV */
-nav {
-  background-color: whitesmoke; }
-  nav .navbar {
-    padding: 15px 50px 15px 50px; }
-  nav .navbar-nav {
+.navbar {
+  background-color: #f5f5f5;
+  padding: 15px 50px 15px 50px; }
+  .navbar .navbar-nav {
     text-align: right; }
-    nav .navbar-nav a {
+    .navbar .navbar-nav a {
       text-decoration: none;
       color: #131e3c;
       font-weight: bold;
       font-size: 20px; }
-      nav .navbar-nav a :hover {
-        color: #f55b14; }
-
-/* HOME - MAIN CONTAINER */
-.home-first-sec {
-  height: 100vh; }
+    .navbar .navbar-nav a:hover {
+      color: #f55b14; }
 
 /* HOME - COVER */
 .home-cover {
@@ -67,7 +66,7 @@ nav {
   .home-cover h1 {
     font-size: 75px;
     font-weight: bold;
-    color: whitesmoke;
+    color: #f5f5f5;
     margin-bottom: 1rem; }
     .home-cover h1 span {
       background-color: rgba(19, 30, 60, 0.6);
@@ -75,20 +74,303 @@ nav {
       border-radius: 2rem; }
   .home-cover h2 {
     font-size: 30px;
-    color: whitesmoke; }
+    color: #f5f5f5; }
   .home-cover div {
     margin-top: 3rem; }
     .home-cover div a {
       text-decoration: none;
       font-weight: bold;
-      color: whitesmoke;
+      color: #f5f5f5;
       margin: 1rem;
       padding: 1rem;
       border-radius: 1rem; }
-      .home-cover div a :hover {
-        border: 1px solid whitesmoke;
-        background-color: initial; }
+    .home-cover div a:hover {
+      border: 1px solid #f5f5f5;
+      background-color: initial; }
   .home-cover .about-us-button {
     background-color: #f55b14; }
   .home-cover .contact-button {
     background-color: #131e3c; }
+
+/* ESTILOS MAIN Y H1 */
+main div {
+  padding: 1rem 10rem 1rem 10rem; }
+  main div h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center; }
+
+/* HOME NAVTAP BOOTSTRAP - POLITIC */
+.politic-sec {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .politic-sec ul {
+    padding-bottom: 10px; }
+    .politic-sec ul li a {
+      background-color: #131e3c;
+      font-weight: bold;
+      color: #f5f5f5;
+      margin: 1rem;
+      padding: 1rem;
+      border-radius: 1rem; }
+    .politic-sec ul li a:hover {
+      background-color: #f55b14;
+      color: #f5f5f5;
+      cursor: pointer; }
+  .politic-sec section .tab-pane {
+    padding: 0; }
+  .politic-sec section div h3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline; }
+  .politic-sec .our-history {
+    text-decoration: none;
+    color: #f55b14;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 1rem; }
+  .politic-sec .our-history:hover {
+    text-decoration: underline;
+    color: #f55b14; }
+
+/* HOME - SERVICES */
+.services-cards {
+  display: grid;
+  grid-template-areas: "IA CM MI";
+  justify-content: space-around; }
+  .services-cards div {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 20rem;
+    border: 2px solid #131e3c;
+    border-radius: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between; }
+    .services-cards div img {
+      width: 40%;
+      margin: auto; }
+    .services-cards div span {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center; }
+    .services-cards div p {
+      display: none; }
+    .services-cards div a {
+      display: none;
+      text-decoration: none;
+      text-align: center;
+      color: #f55b14;
+      font-weight: bold; }
+    .services-cards div a:hover {
+      text-decoration: underline; }
+  .services-cards div:hover {
+    transform: scale(1.05); }
+  .services-cards div:hover > img {
+    display: none; }
+  .services-cards div:hover > a, .services-cards div:hover > p {
+    display: block; }
+  .services-cards .ing-card {
+    grid-area: IA; }
+  .services-cards .cal-card {
+    grid-area: CM; }
+  .services-cards .man-card {
+    grid-area: MI; }
+
+/* PAGES - MAIN CONTAINER */
+.pages-first-sec {
+  height: 50vh; }
+
+/* PAGES - COVER */
+.pages-cover {
+  height: 34vh;
+  background-image: url("../img/plantaAcindar.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center; }
+  .pages-cover h1 {
+    font-size: 65px;
+    color: #f5f5f5;
+    padding-left: 10rem;
+    font-weight: bold; }
+
+/* PAGES ABOUT US */
+.about-us-sec {
+  background-color: #f5f5f5; }
+
+/* PAGES - OUR SERVICES */
+.our-services-sec {
+  background-color: #f5f5f5; }
+  .our-services-sec ul li {
+    list-style-type: none;
+    text-align: center;
+    margin-bottom: 1rem; }
+    .our-services-sec ul li span {
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: underline; }
+
+/* PAGES - CERTIFICATIONS */
+.certifications-sec {
+  display: grid;
+  height: 200px;
+  justify-content: space-evenly;
+  grid-template-areas: "text pdf"; }
+  .certifications-sec div {
+    padding: 0;
+    margin: 1rem; }
+  .certifications-sec .certifications-text {
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .certifications-sec .certifications-text h1 {
+      text-align: center;
+      font-size: 24px; }
+  .certifications-sec .certifications-pdf {
+    grid-area: pdf;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+    .certifications-sec .certifications-pdf a {
+      text-decoration: none;
+      color: #f55b14;
+      font-weight: bold;
+      font-size: 20px; }
+
+/* PAGES - EXPERIENCE */
+.experience-cards {
+  margin: 1.5rem;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center; }
+
+/* PAGES - FORM */
+.form-sec {
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 1.5rem; }
+  .form-sec h1 {
+    padding-bottom: 1rem; }
+
+form {
+  background-color: white;
+  width: 400px;
+  padding: 1.2rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  margin: auto; }
+  form div {
+    padding: 0; }
+  form input, form textarea {
+    width: 100%;
+    padding: 3px; }
+  form textarea {
+    height: 5rem; }
+  form .form-data input {
+    margin-bottom: 0.5rem; }
+  form .form-button {
+    background-color: #131e3c;
+    color: #f5f5f5;
+    font-weight: bold; }
+  form .form-button:hover {
+    background-color: #f55b14;
+    cursor: pointer; }
+
+/* PAGES - INFO */
+.info-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem; }
+  .info-sec h2 {
+    font-size: 24px;
+    text-decoration: underline; }
+  .info-sec p span {
+    font-weight: bold;
+    font-style: italic; }
+
+/* PAGES - LOCATION */
+.location-sec {
+  padding: 0; }
+  .location-sec img {
+    max-width: 100%;
+    height: auto; }
+
+/* FOOTER */
+footer {
+  background-color: #131e3c;
+  color: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px 0 10px; }
+  footer span a {
+    text-decoration: none;
+    color: #f5f5f5; }
+  footer span a:hover {
+    color: #f55b14; }
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 600px) {
+  /*HOME - MAIN CONTAINER */
+  .home-first-sec {
+    height: 50vh; }
+  /* HEADER */
+  header {
+    height: 20px;
+    justify-content: center;
+    padding: 0; }
+    header .phone-number {
+      display: none; }
+    header .follow-us {
+      display: none; }
+  /* NAV */
+  .navbar {
+    padding: 1rem 1.5rem 1rem 1.5rem; }
+  /* HOME - COVER */
+  .home-cover {
+    height: 36vh;
+    background-image: url("../img/plantaTerniumMobile.jpg"); }
+    .home-cover h1 {
+      font-size: 32px; }
+    .home-cover h2 {
+      font-size: 16px; }
+    .home-cover div {
+      margin-top: 1rem; }
+      .home-cover div a {
+        padding: 0.8rem;
+        margin: 0.5rem; }
+  /* ESTILOS MAIN Y H1 */
+  main div {
+    padding: 1rem; }
+    main div h1 {
+      font-size: 26px; }
+  /* HOME NAVTAB BOOTSTRAP - POLITIC */
+  .politic-sec ul li a {
+    padding: 0.8rem;
+    margin: 0.5rem; }
+  .politic-sec .our-history {
+    font-size: 20px;
+    margin: 0.5rem; }
+  /* HOME - SERVICES */
+  .services-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .services-cards div {
+      margin: 1rem; }
+    .services-cards div:hover {
+      transform: initial; }
+    .services-cards div:hover > img, .services-cards div a, .services-cards div p {
+      display: initial; }
+  /* FOOTER */
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 0; }
+    footer .span-sg {
+      display: none; } }

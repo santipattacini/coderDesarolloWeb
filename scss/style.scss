@@ -1,4 +1,7 @@
 @import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'utilities/extend';
+@import 'utilities/maps';
 
 /* reset */
 *{
@@ -15,20 +18,12 @@ body{
     }
 }
 
-/* HOME - MAIN CONTAINER */ 
-.home-first-sec{
-    height: 100vh;
-
-}
-
 /* HEADER */
 header{
     height: 40px;
     background-color: $primary-color;
     color: $tertiary-color;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexR-sb;
     padding: 0 40px 0 40px;
     span{
         color: $secondary-color;
@@ -73,7 +68,7 @@ header{
 
 /* HOME - COVER */
 .home-cover{
-    height: 84vh;
+    height: 80vh;
     background-image: url('../img/plantaTernium.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -86,43 +81,39 @@ header{
         font-weight: bold;
         color: $tertiary-color;
         margin-bottom: 1rem;
+        transition: 0.8s;
         span{
             background-color: rgba( 19, 30, 60, 0.6);
             padding: 0 20px 0 20px;
             border-radius: 2rem;
         }
     }
-    h2{
+    h3{
         font-size: 30px;
         color: $tertiary-color;
     }
     div{
         margin-top: 3rem;
         a{
-            text-decoration: none;
-            font-weight: bold;
-            color: $tertiary-color;
-            margin: 1rem;
-            padding: 1rem;
-            border-radius: 1rem;
+            @extend %homeButtons;
         }
         a:hover{
-            border: 1px solid $tertiary-color;
-            background-color: initial;
+            background-color: map-get($map: $buttonTransparent, $key: bg-t);
+            border: map-get($map: $buttonTransparent, $key: border-w);
         }
     }
     .about-us-button{
-        background-color: $secondary-color;
+        background-color: map-get($map: $buttonBlue, $key: bg-b);
     }
     .contact-button{
-        background-color: $primary-color;
+        background-color: map-get($map: $buttonOrange, $key: bg-o);
     }
 }
 
 /* ESTILOS MAIN Y H1 */
 main div{
     padding: 1rem 10rem 1rem 10rem;
-    h1{
+    h2{
         font-size: 40px;
         font-weight: bold;
         text-align: center;
@@ -131,7 +122,9 @@ main div{
 
 /* HOME NAVTAP BOOTSTRAP - POLITIC */
 .politic-sec{
-    background-color: $tertiary-color;
+    background-image: url('../img/greyBackground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,7 +151,7 @@ main div{
             padding: 0;
         }
         div{
-            h3{
+            h4{
                 font-size: 24px;
                 font-weight: bold;
                 text-decoration: underline;
@@ -323,6 +316,17 @@ main div{
     justify-content: center;
 } 
 
+/* PAGES - EXP CARDS */ 
+.exp-cards-sec{
+    padding-top: 4rem;
+    div{
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
 /* PAGES - FORM */
 .form-sec{
     background-color: $tertiary-color;
@@ -333,11 +337,8 @@ main div{
     }
 } 
 form{
-    background-color: white;
     width: 400px;
-    padding: 1.2rem;
-    border: 1px solid black;
-    border-radius: 1rem;
+    padding: 1rem;
     margin: auto;
     div{
         padding: 0;
@@ -410,10 +411,7 @@ footer{
 
 /* MEDIA QUERIES */ 
 @media screen and (max-width: 600px){
-    /*HOME - MAIN CONTAINER */
-    .home-first-sec{
-        height: 50vh;
-    }
+
     /* HEADER */
     header{
         height: 20px;
@@ -432,12 +430,12 @@ footer{
     }
     /* HOME - COVER */ 
     .home-cover{
-        height: 36vh;
+        height: 30vh;
         background-image: url('../img/plantaTerniumMobile.jpg');
         h1{
             font-size: 32px;
         }
-        h2{
+        h3{
             font-size: 16px;
         }
         div{
@@ -451,7 +449,7 @@ footer{
     /* ESTILOS MAIN Y H1 */ 
     main div{
         padding: 1rem;
-        h1{
+        h2{
             font-size: 26px;
         }
     }

@@ -1,4 +1,5 @@
-.home-cover div a {
+/* utilities */
+.home-cover div a, .politic-sec ul li a {
   margin: 1rem;
   padding: 1rem;
   border-radius: 1rem;
@@ -15,22 +16,23 @@
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
-  color: #131e3c; }
+  color: #111c38; }
   body p {
     text-align: justify; }
 
-/* HEADER 
-===================================================== */
+/* 1) ALL PAGES
+// ===================================================== */
+/* HEADER */
 header {
   height: 40px;
-  background-color: #131e3c;
+  background-color: #111c38;
   color: #f5f5f5;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 40px 0 40px; }
   header span {
-    color: #f55b14;
+    color: #f05a14;
     font-weight: bold; }
   header div ul {
     display: inline-block; }
@@ -52,14 +54,13 @@ header {
     text-align: right; }
     .navbar .navbar-nav a {
       text-decoration: none;
-      color: #131e3c;
+      color: #111c38;
       font-weight: bold;
       font-size: 20px; }
     .navbar .navbar-nav a:hover {
-      color: #f55b14; }
+      color: #f05a14; }
 
-/* ESTILOS MAIN Y H1 
-=====================================================*/
+/* ESTILOS MAIN Y H1 */
 main div {
   padding: 1rem 10rem 1rem 10rem; }
   main div h2 {
@@ -67,13 +68,14 @@ main div {
     font-weight: bold;
     text-align: center; }
 
-/* HOME - COVER 
+/* 2) HOME 
 ===================================================== */
+/* COVER */
 .home-cover {
   height: 78vh;
   background-image: url("../img/plantaTernium.jpg");
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -83,9 +85,9 @@ main div {
     font-weight: bold;
     color: #f5f5f5;
     margin-bottom: 1rem;
-    transition: 0.8s; }
+    transition: 800ms; }
     .home-cover h1 span {
-      background-color: rgba(19, 30, 60, 0.6);
+      background-color: rgba(17, 28, 56, 0.6);
       padding: 0 20px 0 20px;
       border-radius: 2rem; }
   .home-cover h3 {
@@ -97,29 +99,24 @@ main div {
       background-color: initial;
       border: 1px solid #f5f5f5; }
   .home-cover .about-us-button {
-    background-color: #131e3c; }
+    background-color: #111c38; }
   .home-cover .contact-button {
-    background-color: #f55b14; }
+    background-color: #f05a14; }
 
-/* NAVTAP BOOTSTRAP - POLITIC */
+/* POLITIC (bt navtap)*/
 .politic-sec {
   background-image: url("../img/greyBackground.png");
-  background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center; }
   .politic-sec ul {
     padding-bottom: 10px; }
     .politic-sec ul li a {
-      background-color: #131e3c;
-      font-weight: bold;
-      color: #f5f5f5;
-      margin: 1rem;
-      padding: 1rem;
-      border-radius: 1rem; }
+      background-color: #111c38; }
     .politic-sec ul li a:hover {
-      background-color: #f55b14;
+      background-color: #f05a14;
       color: #f5f5f5;
       cursor: pointer; }
   .politic-sec section .tab-pane {
@@ -130,13 +127,13 @@ main div {
     text-decoration: underline; }
   .politic-sec .our-history {
     text-decoration: none;
-    color: #f55b14;
+    color: #f05a14;
     font-weight: bold;
     font-size: 24px;
     margin: 1rem; }
   .politic-sec .our-history:hover {
     text-decoration: underline;
-    color: #f55b14; }
+    color: #f05a14; }
 
 /* SERVICES */
 .services-cards {
@@ -147,7 +144,7 @@ main div {
     margin: 0 0.5rem 1rem 0.5rem;
     padding: 1rem;
     width: 20rem;
-    border: 2px solid #131e3c;
+    border: 2px solid #111c38;
     border-radius: 1rem;
     display: flex;
     flex-flow: column nowrap;
@@ -165,7 +162,7 @@ main div {
       display: none;
       text-decoration: none;
       text-align: center;
-      color: #f55b14;
+      color: #f05a14;
       font-weight: bold; }
     .services-cards div a:hover {
       text-decoration: underline; }
@@ -180,13 +177,12 @@ main div {
   .services-cards .man-card {
     grid-area: MI; }
 
-/* PAGES - COVER 
+/* 3) PAGES COVER 
 ===================================================== */
 .pages-cover {
   height: 25vh;
   background-image: url("../img/pagesCover.png");
   background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   align-items: center; }
   .pages-cover h1 {
@@ -195,16 +191,15 @@ main div {
     padding-left: 10rem;
     font-weight: bold; }
 
-/* PAGES - ABOUT US 
+/* 4) ABOUT US 
 ===================================================== */
 .about-us-sec {
   background-image: url("../img/greyBackground.png");
-  background-repeat: no-repeat;
   background-size: cover; }
 
-/* PAGES - SERVICES 
-===================================================== 
-OUR SERVICES */
+/* 5) SERVICES 
+// ===================================================== */
+/* OUR SERVICES */
 .our-services-sec {
   background-color: #f5f5f5; }
   .our-services-sec ul {
@@ -235,10 +230,13 @@ OUR SERVICES */
     grid-area: text;
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center; }
     .certifications-sec .certifications-text h1 {
       text-align: center;
       font-size: 24px; }
+    .certifications-sec .certifications-text p {
+      text-align: center; }
   .certifications-sec .certifications-pdf {
     width: 360px;
     grid-area: pdf;
@@ -248,13 +246,12 @@ OUR SERVICES */
     align-items: center; }
     .certifications-sec .certifications-pdf a {
       text-decoration: none;
-      color: #f55b14;
+      color: #f05a14;
       font-weight: bold;
       font-size: 20px; }
 
-/* PAGES - EXPERIENCE 
-=====================================================
-EXP GALLERY */
+/* 6) EXPERIENCE 
+===================================================== */
 .mant {
   margin-top: 2rem; }
 
@@ -264,7 +261,6 @@ EXP GALLERY */
 .gallery-sec {
   padding: 0;
   display: flex;
-  justify-content: center;
   align-items: center; }
   .gallery-sec .gallery-item figure {
     position: relative;
@@ -278,7 +274,7 @@ EXP GALLERY */
       padding: 2rem 0.3rem 0 0.3rem;
       position: absolute;
       visibility: hidden;
-      background-image: linear-gradient(rgba(245, 91, 20, 0.9), rgba(245, 91, 20, 0.1));
+      background-image: linear-gradient(rgba(240, 90, 20, 0.9), rgba(245, 91, 20, 0.1));
       top: 0;
       height: 100%;
       width: 100%;
@@ -296,9 +292,9 @@ EXP GALLERY */
     transform: scale(1.5);
     transition: all 400ms ease; }
 
-/* PAGES - CONTACT
-===================================================== 
-FORM */
+/* CONTACT
+===================================================== */
+/* FORM */
 .form-sec {
   background-image: url("../img/greyBackground.png");
   background-repeat: no-repeat;
@@ -322,23 +318,25 @@ form {
   form .form-data input {
     margin-bottom: 0.5rem; }
   form .form-button {
-    background-color: #131e3c;
+    background-color: #111c38;
     color: #f5f5f5;
-    font-weight: bold; }
+    font-weight: bold;
+    border-radius: 1rem; }
   form .form-button:hover {
-    background-color: #f55b14;
+    background-color: #f05a14;
     cursor: pointer; }
 
 /* INFO */
 .info-sec {
-  padding: 1rem 7.5rem 1rem 7.5rem;
+  padding: 1rem 4rem 1rem 4rem;
   display: flex;
-  justify-content: space-around; }
+  justify-content: center; }
   .info-sec .info-content {
     width: 390px;
-    margin: auto;
+    margin: 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 1rem; }
     .info-sec .info-content p span {
@@ -355,16 +353,17 @@ form {
 /* FOOTER 
 ===================================================== */
 footer {
-  background-color: #131e3c;
+  background-color: #111c38;
   color: #f5f5f5;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 10px 0 10px; }
   footer span a {
     text-decoration: none;
     color: #f5f5f5; }
   footer span a:hover {
-    color: #f55b14; }
+    color: #f05a14; }
 
 /* MEDIA QUERIES 
 ===================================================== */
@@ -431,9 +430,9 @@ footer {
     padding: 0 3rem 0 3rem; }
     .gallery-sec .gallery-item figure .capa {
       padding: 1rem 0.3rem 0 0.3rem;
-      height: 50%;
+      height: 70%;
       visibility: visible;
-      background-image: linear-gradient(rgba(245, 91, 20, 0.9), rgba(245, 91, 20, 0)); }
+      background-image: linear-gradient(rgba(240, 90, 20, 0.9), rgba(245, 91, 20, 0)); }
       .gallery-sec .gallery-item figure .capa h3 {
         font-size: 20px; }
   /* FORM */
@@ -447,6 +446,8 @@ footer {
   /* CONTACT */
   .info-sec {
     flex-direction: column; }
+    .info-sec .info-content {
+      margin: auto; }
   /* FOOTER */
   footer {
     flex-direction: column;
@@ -517,8 +518,6 @@ footer {
   /* PAGES - EXP CARDS */
   .gallery-sec {
     padding: 0 4rem 0 4rem; }
-    .gallery-sec .gallery-item figure .capa {
-      height: 70%; }
   /* FORM */
   form {
     width: 300px; }

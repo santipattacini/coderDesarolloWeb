@@ -1,7 +1,38 @@
 // MIXINS
 
-@mixin flexR-sb{
+// flex row center
+@mixin flex-row-c{
+    display: flex;
+    align-items: center;
+}
+
+// flex row space between
+@mixin flex-row-sb{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+// flex column center
+@mixin flex-col-c{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+// flex column space between
+@mixin flex-col-sp{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+// flex column space evently
+@mixin flex-col-se{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+

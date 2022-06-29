@@ -667,14 +667,18 @@ footer{
     } 
     /* PAGES - EXP CARDS */ 
     .gallery-sec{
-        padding: 0 6rem 0 6rem;
+        padding: 0 4rem 0 4rem;
+        .gallery-item{
+            figure{
+                .capa{
+                    height: 70%;
+                }
+            }
+        }
     }
     /* FORM */
     form{
         width: 300px;
-        textarea{
-            height: 3rem;
-        }
     } 
     /* CONTACT */
     .info-sec{

@@ -510,12 +510,12 @@ footer {
     font-size: 16px; }
   /* PAGES - EXP CARDS */
   .gallery-sec {
-    padding: 0 6rem 0 6rem; }
+    padding: 0 4rem 0 4rem; }
+    .gallery-sec .gallery-item figure .capa {
+      height: 70%; }
   /* FORM */
   form {
     width: 300px; }
-    form textarea {
-      height: 3rem; }
   /* CONTACT */
   .info-sec {
     padding: 1rem 0 1rem 0; }

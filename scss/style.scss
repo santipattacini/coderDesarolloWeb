@@ -561,7 +561,7 @@ footer{
     } 
     /* FORM */ 
     .form-sec{
-        padding: 0;
+        padding: 1rem 0 0 0;
         form{
             margin: 0;
             margin: auto;
@@ -659,7 +659,12 @@ footer{
     }
     /* CERTIFICATIONS */
     .certifications-sec{
+        padding: 1rem 0 1rem 0;
+        .certifications-text{
+            width: 300px;
+        }
         .certifications-pdf{
+            width: 300px;
             a{
                 font-size: 16px;
             }

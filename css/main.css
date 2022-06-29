@@ -438,7 +438,7 @@ footer {
         font-size: 20px; }
   /* FORM */
   .form-sec {
-    padding: 0; }
+    padding: 1rem 0 0 0; }
     .form-sec form {
       margin: 0;
       margin: auto; }
@@ -506,8 +506,14 @@ footer {
       font-size: 26px;
       padding-left: 2rem; }
   /* CERTIFICATIONS */
-  .certifications-sec .certifications-pdf a {
-    font-size: 16px; }
+  .certifications-sec {
+    padding: 1rem 0 1rem 0; }
+    .certifications-sec .certifications-text {
+      width: 300px; }
+    .certifications-sec .certifications-pdf {
+      width: 300px; }
+      .certifications-sec .certifications-pdf a {
+        font-size: 16px; }
   /* PAGES - EXP CARDS */
   .gallery-sec {
     padding: 0 4rem 0 4rem; }
